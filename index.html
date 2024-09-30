@@ -58,13 +58,16 @@
         /* Diseño de la imagen de portada */
         .content img {promalaga.jpeg
                     
-            max-width: 30%;
-            height: auto;30
-            display: block;30
-            margin: 0 auto 15px;
+            width: 150px; /* Tamaño de imagen pequeño */
+            height: 150px; /* Mantiene proporción cuadrada */
+            display: block;
+            margin: 0 auto 30px;
             border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            object-fit: cover; /* Asegura que la imagen se ajuste sin distorsión */
+        
         }
+
 
         /* Sección de contenido */
         .content {
