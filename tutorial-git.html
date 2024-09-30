@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación - Cómo Utilizar Git</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #6a11cb;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        header p {
+            font-size: 1.3em;
+            margin-top: 10px;
+        }
+
+        .presentation {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        .slide h2 {
+            color: #6a11cb;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .slide p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .slide code {
+            display: block;
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .slide img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .controls button {
+            background-color: #6a11cb;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .controls button:hover {
+            background-color: #5a0dbd;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Presentación: Cómo Utilizar Git</h1>
+    <p>Una guía paso a paso para principiantes</p>
+</header>
+
+<div class="presentation">
+    <div class="slide active" id="slide1">
+        <h2>1. ¿Qué es Git?</h2>
+        <p>Git es un sistema de control de versiones distribuido que te permite rastrear los cambios en los archivos y colaborar con otros desarrolladores. Es ideal para proyectos individuales y colaborativos.</p>
+        <img src="ruta_a_tu_imagen_git.png" alt="Git logo">
+    </div>
+
+    <div class="slide" id="slide2">
+        <h2>2. Inicialización de un Repositorio Local</h2>
+        <p>Para inicializar un repositorio en Git, navega a la carpeta de tu proyecto y ejecuta el siguiente comando:</p>
+        <code>git init</code>
+        <p>Esto creará una carpeta oculta llamada <code>.git</code>, donde se almacenarán todos los datos necesarios para el control de versiones.</p>
+    </div>
+
+    <div class="slide" id="slide3">
+        <h2>3. Creación de Branches (Ramas)</h2>
+        <p>Las ramas permiten trabajar en nuevas características o correcciones de errores sin afectar la rama principal (<code>main</code>). Para crear una rama nueva:</p>
+        <code>git branch feature-login</code>
+        <p>Cambia a la nueva rama con:</p>
+        <code>git checkout feature-login</code>
+    </div>
+
+    <div class="slide" id="slide4">
+        <h2>4. Fusionar Ramas (Merge)</h2>
+        <p>Una vez que termines de trabajar en una rama, puedes fusionarla con la rama principal:</p>
+        <code>git checkout main<br>git merge feature-login</code>
+        <p>Esto integrará los cambios de la rama <code>feature-login</code> en la rama principal <code>main</code>.</p>
+    </div>
+
+    <div class="slide" id="slide5">
+        <h2>5. Conectar a un Repositorio Remoto</h2>
+        <p>Para conectar tu repositorio local a GitHub, utiliza el siguiente comando:</p>
+        <code>git remote add origin https://github.com/tu-usuario/mi-proyecto.git</code>
+        <p>Sube los archivos al repositorio remoto con:</p>
+        <code>git push -u origin main</code>
+    </div>
+
+    <div class="slide" id="slide6">
+        <h2>¡Gracias por ver la presentación!</h2>
+        <p>Ahora sabes cómo inicializar un repositorio, crear ramas, fusionarlas y conectar tu proyecto a un repositorio remoto en GitHub.</p>
+    </div>
+
+    <div class="controls">
+        <button onclick="prevSlide()">Anterior</button>
+        <button onclick="nextSlide()">Siguiente</button>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Yulieth Lauzury Guarín Bedoya. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = index;
+        slides[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+        if (currentSlide < slides.length - 1) {
+            showSlide(currentSlide + 1);
+        }
+    }
+
+    function prevSlide() {
+        if (currentSlide > 0) {
+            showSlide(currentSlide - 1);
+        }
+    }
+</script>
+
+</body>
+</html>
+
