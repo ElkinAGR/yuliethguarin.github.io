@@ -5,37 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yulieth Lauzury Guarín Bedoya</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+        /* Estilos generales */
+        * {
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            box-sizing: border-box;
         }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+
+        /* Diseño de encabezado elegante */
         header {
-            background-color: #333;
+            background-image: linear-gradient(to right, #6a11cb, #2575fc);
             color: white;
-            padding: 10px 0;
+            padding: 50px 0;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+        header h1 {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2em;
+            font-style: italic;
+        }
+
+        /* Navegación */
         nav {
-            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             text-align: center;
+            padding: 15px 0;
+            margin-bottom: 20px;
         }
         nav a {
-            margin: 0 15px;
-            text-decoration: none;
             color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
             font-weight: bold;
         }
-        .content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
+        nav a:hover {
+            color: #6a11cb;
         }
-        footer {
-            margin-top: 20px;
+
+        /* Diseño de la imagen de portada */
+        .content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Sección de contenido */
+        .content {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto 50px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            color: #6a11cb;
+            margin-bottom: 20px;
             text-align: center;
-            color: #777;
+        }
+        .content p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Diseño del pie de página */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer p {
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -43,43 +103,45 @@
 
 <header>
     <h1>Yulieth Lauzury Guarín Bedoya</h1>
+    <p>Economista y Estudiante de Ingeniería de Software</p>
 </header>
 
-    <!-- Imagen de portada -->
-<div class="content">
-    <img src="ruta_de_tu_imagen.png" alt="Yulieth Lauzury Guarín Bedoya en Promálaga">
-</div>
-
 <nav>
-    <a href="index.html">Inicio</a>
-    <a href="blog.html">Blog</a>
+    <a href="#inicio">Inicio</a>
+    <a href="#acerca-de-mi">Acerca de mí</a>
+    <a href="#blog">Blog</a>
     <a href="#contacto">Contacto</a>
 </nav>
 
 <div class="content">
-    <h2>Acerca de mí</h2>
-    <p>Mi nombre es Yulieth Lauzury Guarín Bedoya. Tengo 23 años y soy del Tolima. Actualmente vivo en España con mi pareja y mis dos hijos. 
-    Tengo una empresa de asesoría y estudio Economía en la Universidad El Bosque y en la IU Digital de Antioquia, donde curso Ingeniería de Software y Datos. 
-    Tengo grandes compañeros muy apasionados por la carrera y grandes docentes muy capacitados en cada área. Me encantan los animales y tengo una mascota llamada Canela, quien es un miembro más de mi familia. 
-    También disfruto ir al jardín a leer y aprender cosas nuevas.</p>
+    <img src="ruta_de_tu_imagen.png" alt="Yulieth en Promálaga">
+    <h2 id="acerca-de-mi">Acerca de mí</h2>
+    <p>
+        Mi nombre es Yulieth Lauzury Guarín Bedoya. Soy economista en formación y estudiante de Ingeniería de Software y Datos en la IU Digital de Antioquia y en la Universidad El Bosque. Actualmente resido en España junto a mi pareja y dos hijos. Además de mis estudios, tengo una empresa de asesoría. Me apasionan los animales, especialmente mi perrita Canela, que es parte fundamental de nuestra familia. También disfruto pasar tiempo en el jardín, leyendo y aprendiendo cosas nuevas cada día.
+    </p>
+    <p>
+        Me he interesado en temas de tecnología, especialmente en la innovación de hardware y software. Mi objetivo es contribuir a crear soluciones tecnológicas sostenibles que impacten positivamente a las empresas y a la sociedad.
+    </p>
 </div>
 
-<div class="content" id="blog">
-    <h2> Entrada en el Blog</h2>
-    <p><strong>Arquitectura de Computadoras: CISC vs RISC</strong></p>
-    <p>Una de las grandes diferencias en la arquitectura de los procesadores es la distinción entre CISC y RISC. En esta entrada, exploro cómo cada una de estas arquitecturas aborda la eficiencia y el rendimiento...</p>
-    <a href="blog.html">Leer más</a>
+<div class="content">
+    <h2 id="blog">Blog</h2>
+    <p>
+        Explora mis reflexiones e investigaciones sobre tecnología, hardware, software y tendencias emergentes. Recientemente, he profundizado en temas clave como la arquitectura de hardware moderno y las tendencias futuras en IA y computación cuántica.
+    </p>
+    <p><a href="blog.html">Leer más...</a></p>
 </div>
 
 <div class="content" id="contacto">
-    <h2>634028069</h2>
-    <p>Puedes contactarme a través de mi correo electrónico: yulieth@example.com</p>
+    <h2>Contacto</h2>
+    <p>Puedes contactarme a través de mi correo electrónico: <strong>yulieth@example.com</strong>.</p>
 </div>
 
 <footer>
-    <p>&copy; 2024 Yulieth Lauzury Guarín Bedoya</p>
+    <p>&copy; 2024 Yulieth Lauzury Guarín Bedoya. Todos los derechos reservados.</p>
 </footer>
 
 </body>
 </html>
+
 
