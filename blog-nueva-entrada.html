@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Tutorial de Git</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #777;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tutorial de Git: Guía Detallada</h1>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="blog.html">Blog</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<div class="content">
+    <h2>Cómo utilizar Git: Tutorial Paso a Paso</h2>
+    <p>Este tutorial te guiará a través de los pasos básicos para usar Git en tu proyecto. Aprenderás cómo inicializar un repositorio local, cómo crear ramas (branches) y cómo conectar tu repositorio local a un repositorio remoto en GitHub.</p>
+
+    <!-- Inicialización del repositorio -->
+    <h3>1. Inicialización del Repositorio Local</h3>
+    <p>El primer paso para empezar a usar Git es inicializar un repositorio local en tu proyecto. Un repositorio es donde Git guarda todas las versiones de los archivos y su historial de cambios.</p>
+    
+    <h4>¿Cómo se hace?</h4>
+    <p>En la terminal, navega a la carpeta de tu proyecto y usa el siguiente comando:</p>
+    <pre><code>git init</code></pre>
+    <p>Este comando crea una carpeta oculta llamada <code>.git</code>, donde Git almacenará toda la información relacionada con el control de versiones de tu proyecto.</p>
+    
+    <h4>Ejemplo Práctico:</h4>
+    <p>Si tu proyecto está en una carpeta llamada "mi-proyecto", ve a esa carpeta y ejecuta el comando:</p>
+    <pre><code>cd mi-proyecto
+git init</code></pre>
+    <p>Tu carpeta "mi-proyecto" ahora es un repositorio Git, y Git comenzará a rastrear los cambios que hagas en los archivos.</p>
+
+    <!-- Creación de Branches -->
+    <h3>2. Creación de Branches (Ramas)</h3>
+    <p>Las ramas te permiten trabajar en nuevas funcionalidades sin afectar el código principal (por lo general, la rama principal es <code>main</code> o <code>master</code>). Cada rama es una línea separada de desarrollo.</p>
+    
+    <h4>¿Cómo se crea una nueva rama?</h4>
+    <p>Para crear una nueva rama, usa el siguiente comando:</p>
+    <pre><code>git branch nombre-de-la-rama</code></pre>
+    <p>Luego, para cambiarte a esa rama, usa:</p>
+    <pre><code>git checkout nombre-de-la-rama</code></pre>
+    
+    <h4>Ejemplo Práctico:</h4>
+    <p>Imagina que estás trabajando en una nueva funcionalidad llamada "login". Crearías una nueva rama así:</p>
+    <pre><code>git branch feature-login
+git checkout feature-login</code></pre>
+    <p>Ahora, cualquier cambio que hagas solo afectará a la rama <code>feature-login</code>, y no a la rama principal (<code>main</code>).</p>
+
+    <h4>¿Cómo fusionar (merge) una rama con la rama principal?</h4>
+    <p>Una vez que termines de trabajar en la rama, puedes fusionar los cambios con la rama principal:</p>
+    <pre><code>git checkout main
+git merge feature-login</code></pre>
+    <p>Este comando integrará los cambios de <code>feature-login</code> en la rama <code>main</code>.</p>
+
+    <!-- Conectar a un Repositorio Remoto -->
+    <h3>3. Conectar el Repositorio Local a un Repositorio Remoto en GitHub</h3>
+    <p>Ahora que tienes tu repositorio local, es importante conectarlo a un repositorio remoto como GitHub, para poder colaborar con otros o simplemente tener una copia de seguridad en la nube.</p>
+    
+    <h4>Instrucciones:</h4>
+    <p>Primero, crea un nuevo repositorio vacío en GitHub.</p>
+    <p>Luego, en tu terminal, conecta tu repositorio local a GitHub con el siguiente comando:</p>
+    <pre><code>git remote add origin https://github.com/tu-usuario/tu-repositorio.git</code></pre>
+    <p>Este comando asocia tu repositorio local con el repositorio remoto llamado <code>origin</code>.</p>
+
+    <h4>Subir tus Cambios a GitHub:</h4>
+    <p>Finalmente, para subir los cambios de tu repositorio local a GitHub, usa:</p>
+    <pre><code>git push -u origin main</code></pre>
+    <p>Este comando sube los cambios a la rama <code>main</code> en tu repositorio remoto en GitHub.</p>
+
+    <h4>Ejemplo Práctico:</h4>
+    <p>Imagina que tienes cambios locales que deseas subir a GitHub. Primero confirma tus cambios y luego empújalos al remoto:</p>
+    <pre><code>git add .
+git commit -m "Descripción de los cambios"
+git push -u origin main</code></pre>
+    <p>Con estos comandos, has confirmado tus cambios y los has subido a tu repositorio en GitHub.</p>
+</div>
+
+<footer>
+    <p>&copy; 2024 Yulieth Lauzury Guarín Bedoya. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
