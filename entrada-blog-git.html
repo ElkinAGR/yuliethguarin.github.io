@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Cómo Utilizar Git</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        .content h2 {
+            color: #6a11cb;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .content pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-bottom: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 1em;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <h2>Cómo Utilizar Git: Un Tutorial Detallado</h2>
+
+    <p>Git es un sistema de control de versiones que permite a los desarrolladores rastrear los cambios en el código, revertir a versiones anteriores si es necesario y colaborar con otros de manera eficiente. Este tutorial cubre los conceptos básicos para empezar a usar Git en tus proyectos.</p>
+
+    <h3>1. Inicialización del Repositorio Local</h3>
+    <p>Para empezar a utilizar Git, primero necesitas inicializar un repositorio local en la carpeta de tu proyecto. Usa el siguiente comando en tu terminal:</p>
+    <pre><code>git init</code></pre>
+    <p>Este comando crea una carpeta oculta llamada <code>.git</code>, donde Git almacena toda la información relacionada con el control de versiones.</p>
+
+    <h3>2. Creación de Branches (Ramas)</h3>
+    <p>Las ramas son útiles para trabajar en nuevas funcionalidades o corregir errores sin afectar la rama principal. Para crear una nueva rama, utiliza el siguiente comando:</p>
+    <pre><code>git branch feature-nueva-funcionalidad</code></pre>
+    <p>Luego, cambia a la nueva rama con:</p>
+    <pre><code>git checkout feature-nueva-funcionalidad</code></pre>
+
+    <h3>3. Conectar a un Repositorio Remoto</h3>
+    <p>Para subir tu código a un repositorio remoto como GitHub, necesitas conectarlo a tu repositorio local. Usa este comando:</p>
+    <pre><code>git remote add origin https://github.com/tu-usuario/mi-proyecto.git</code></pre>
+    <p>Finalmente, sube tu código con:</p>
+    <pre><code>git push -u origin main</code></pre>
+
+    <p>Este es el comienzo de tu viaje con Git, pero hay mucho más que explorar. ¡Sigue aprendiendo y experimentando!</p>
+</div>
+
+<footer>
+    <p>&copy; 2024 Yulieth Lauzury Guarín Bedoya. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
