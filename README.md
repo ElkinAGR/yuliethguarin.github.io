@@ -1,2 +1,2 @@
 # yuliethguarin.github.io
-mi paguna personal 
+mi pagina personal 
